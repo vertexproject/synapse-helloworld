@@ -29,6 +29,10 @@ class HelloTest(s_test.SynTest):
                     ('inet:dns:a', ('vertex.link', 0x05060708)),
                 ), ndefs)
 
+                # test hello debug output
+                msgs = await core.stormlist('[ inet:fqdn=vertex.link ] | hello.lookup --debug')
+                self.stormIsInPrint('hello.lookup resolving: vertex.link', msgs)
+
                 # test the hello.stream command
                 nodes = await core.nodes('[ inet:fqdn=vertex.link ] | hello.stream')
                 self.len(2, nodes)

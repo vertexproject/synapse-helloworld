@@ -67,10 +67,6 @@ class HelloWorldService(s_stormsvc.StormSvc, s_cell.CellApi):
                         $hello = $lib.import(hello)
                         $nodes = $hello.lookup($fqdn)
 
-                        if $cmdopts.debug {
-                            $lib.print("hello.lookup resolving: {fqdn}", fqdn=$fqdn)
-                        }
-
                         if $cmdopts.yield {
                             -> { yield $nodes }
                         }
