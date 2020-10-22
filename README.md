@@ -5,7 +5,7 @@ Running the service
 -------------------
 
 ```
-python -m helloworld.py --auth-passwd secret --telepath tcp://127.0.0.1:9999/ --https 9443
+python hellostormsvc.py hello00 --auth-passwd secret --telepath tcp://127.0.0.1:9999/ --https 9443
 ```
 
 Connecting your cortex
