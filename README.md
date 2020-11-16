@@ -12,6 +12,6 @@ Connecting your cortex
 ----------------------
 
 ```
-cli> storm service add tcp://root:secret@127.0.0.1:9999/
+cli> storm service.add tcp://root:secret@127.0.0.1:9999/
 ```
 
